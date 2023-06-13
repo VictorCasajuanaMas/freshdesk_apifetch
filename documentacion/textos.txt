@@ -1,0 +1,28 @@
+AppName:
+ApiFetch
+
+App Ovderview:
+get extra information from your contacts by connecting to an external API
+
+Short Description:
+connect with third party API
+
+App Description:
+You can see more information If you have your own API that contains additional information from your freshdesk contacts such as contracted products, debt status, etc... through this App you can connect to show it when you are modifying a ticket or a contact from freshdesk
+
+Instructions:
+Once installed, the application is automatic, you don't have to take any action, when you enter a ticket or a contact, it already connects with your API and shows the result.
+
+Video Link:
+
+App Category:
+Agent Productivity
+
+App specification/Demo Video:
+
+Support Email:
+victorcasajuanamas@gmail.com
+
+Support URL:
+github
+

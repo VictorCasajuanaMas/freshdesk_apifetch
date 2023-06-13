@@ -1,0 +1,55 @@
+{
+    "url":{
+        "display_name":"API URL with GET method",
+        "description":"The URL of the API to use, if it has GET parameters to send with the request, Example1: /{id}  Example2: email={email}&phone={phone}  Note:  the data between braces correspond to the fields of the contract ",
+        "type":"text",
+        "required":true,
+        "visible":true
+    },
+    "method":{
+        "display_name":"Method",
+        "description":"The method of the API to use, Example: GET, POST",
+        "type":"dropdown",
+        "required":true,
+        "visible":true,
+        "options":[
+            "GET",
+            "POST"
+        ],
+        "default_value":"GET"
+    },
+    "headers":{
+        "display_name":"Headers",
+        "description":"Json of Headers to send with the request. Example: {\"Content-Type\": \"application/json\"}",
+        "type":"paragraph",
+        "required":false,
+        "visible":true
+    },
+    "body_format":{
+        "display_name":"Body Format",
+        "description":"The format of the body to send with the request",
+        "type":"dropdown",
+        "required":true,
+        "visible":true,
+        "options":[
+            "x-www-form-urlencoded",
+            "form-data"
+        ],
+        "default_value":"x-www-form-urlencoded"
+    },
+    "body":{
+        "display_name":"Body",
+        "description":"Json of Body to send with the request with pair data:freshdesk_field. Example: {\"myemail\": \"email\", \"myphone\": \"phone\"}",
+        "type":"paragraph",
+        "required":false,
+        "visible":true
+    },
+    "waiting_text":{
+        "display_name":"Waiting Text",
+        "description":"The text to display while waiting for the response. Can use Html syntax. Example: <h1>Waiting for response...</h1>",
+        "type":"text",
+        "required":false,
+        "visible":true,
+        "default_value":"Waiting fro response..."
+    }
+}
