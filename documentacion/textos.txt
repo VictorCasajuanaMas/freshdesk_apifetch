@@ -14,15 +14,22 @@ Instructions:
 Once installed, the application is automatic, you don't have to take any action, when you enter a ticket or a contact, it already connects with your API and shows the result.
 
 Video Link:
+https://youtu.be/iAxzgoYDXsw
 
 App Category:
 Agent Productivity
 
 App specification/Demo Video:
+https://youtu.be/Kua8j2F9gPY
 
 Support Email:
 victorcasajuanamas@gmail.com
 
 Support URL:
-github
+https://github.com/VictorCasajuanaMas/freshdesk_apifetch
 
+privacy:
+https://www.freshworks.com/privacy/
+
+terms:
+https://www.freshworks.com/terms/

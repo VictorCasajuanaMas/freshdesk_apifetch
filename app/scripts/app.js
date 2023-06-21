@@ -23,7 +23,7 @@ async function renderText() {
   }
   
   // update waiting text on widget ---------------------
-  textElement.innerHTML = iparams.waiting_text
+  textElement.innerText = iparams.waiting_text
   
   // get contact data ----------------------------------
   const contactData = await client.data.get('contact');
@@ -36,8 +36,7 @@ async function renderText() {
   
   params.forEach((value) => {
     var variable = ''
-    variable = value.replace( '{', '')
-    variable = variable.replace( '}', '')
+    variable = value.replace( /[{}]/g, '')
     newUrl = newUrl.replace( value, contactData.contact[variable])
   });
 
@@ -83,6 +82,6 @@ async function renderText() {
   const respuesta = await response.text();
 
   // update text on widget ------------------------------
-  textElement.innerHTML = respuesta
+  textElement.innerText = respuesta
 
 }
