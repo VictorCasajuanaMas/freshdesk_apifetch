@@ -15,11 +15,9 @@ async function renderText() {
   // get installation parameters ------------------------
   const iparams = await client.iparams.get();
 
-  // get headers from onstallation parameters ----------
-  const headers = await JSON.parse( iparams.headers );
-  const parameters = {
-    method: iparams.method,
-    headers: headers,
+  // get method from installation parameters ----------
+    const parameters = {
+    method: iparams.method
   }
   
   // update waiting text on widget ---------------------

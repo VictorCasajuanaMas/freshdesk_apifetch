@@ -18,13 +18,6 @@
         ],
         "default_value":"GET"
     },
-    "headers":{
-        "display_name":"Headers",
-        "description":"Json of Headers to send with the request. Example: {\"Content-Type\": \"application/json\"}",
-        "type":"paragraph",
-        "required":false,
-        "visible":true
-    },
     "body_format":{
         "display_name":"Body Format",
         "description":"The format of the body to send with the request",
