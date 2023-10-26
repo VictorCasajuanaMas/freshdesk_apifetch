@@ -44,5 +44,14 @@
         "required":false,
         "visible":true,
         "default_value":"Waiting fro response..."
+    },
+    "debug":{
+        "display_name":"Activate Debug console.log",
+        "description":"Activate the debug console.log",
+        "type":"checkbox",
+        "required":false,
+        "visible":true,
+        "default_value":false
     }
+
 }
