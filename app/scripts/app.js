@@ -1,11 +1,11 @@
-// version 1.0.1
+// version 3.0
 
 var client;
 
 init();
 
 async function init() {
-  console.log('#apifetch#0 init')
+  console.log('#apifetch#0 init version 3.0')
   client = await app.initialized();
   console.log('#apifetch#1 cliente.events.on')
   client.events.on('app.activated', renderText);
