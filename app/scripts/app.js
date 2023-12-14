@@ -1,6 +1,6 @@
 var client;
 var iparams;
-var version = '4.0'
+var version = '4.1'
 
 init();
 
@@ -64,28 +64,28 @@ async function renderText() {
     if ( body ) {
           
       var body = JSON.parse( body );
-      keys = Object.keys(body);
-      values = Object.values(body);
           
       switch (iparams.body_format) {
 
         case "x-www-form-urlencoded":
           
-          newBody = new URLSearchParams();
+          parameters.body = new URLSearchParams();
+
+          parameters.headers = new Headers();
+          parameters.headers.append("Content-Type", "application/x-www-form-urlencoded");
     
         break;
 
         case "form-data":
 
-          newBody = new FormData();
+          parameters.body = new FormData();
           
         }
-        
-        keys.forEach((key) => {
-          newBody.append(key, contactData.contact[body[key]])
-        })
-        
-        parameters.body = newBody
+
+        for (let x in body ) {
+          parameters.body.append(x, body[x])
+          console.log('#apifetch#12.1 parameters:',x, body[x])
+        }
 
       }
   
@@ -93,17 +93,12 @@ async function renderText() {
 
   // get response from URL ------------------------------
   debug('#apifetch#13 get response from URL')
-  const response = await fetch(newUrl, parameters)
+  await fetch(newUrl, parameters)
+                              .then( response => response.text() )
+                              .then( result => textElement.innerText = result )
+                              .catch( error => console.error(error) );
 
-  // get response text ----------------------------------
   debug('#apifetch#14 get response text')
-  const respuesta = await response.text();
-
-  // update text on widget ------------------------------
-  debug('#apifetch#15 update text on widget')
-  textElement.innerText = respuesta
-
-  debug('#apifetch#16 end function RenderText()')
 
 }
 
