@@ -1,7 +1,7 @@
 {
     "url":{
         "display_name":"API URL with GET method",
-        "description":"The URL of the API to use, if it has GET parameters to send with the request, Example1: /{id}  Example2: email={email}&phone={phone}  Note:  the data between braces correspond to the fields of the contract ",
+        "description":"The URL of the API to use, if it has GET parameters to send with the request, Example1: /{id}  Example2: email={contact.email}&phone={contact.phone}  Note:  the data between braces correspond to the fields of the contact ",
         "type":"text",
         "required":true,
         "visible":true
@@ -32,7 +32,7 @@
     },
     "body":{
         "display_name":"Body",
-        "description":"Json of Body to send with the request with pair data:freshdesk_field. Example: {\"myemail\": \"email\", \"myphone\": \"phone\"}",
+        "description":"Json of Body to send with the request with pair data:freshdesk_field. Example: {\"myemail\": \"contact.email\", \"myphone\": \"contact.phone\"}",
         "type":"paragraph",
         "required":false,
         "visible":true
