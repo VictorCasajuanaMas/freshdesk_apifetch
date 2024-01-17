@@ -1,8 +1,12 @@
 {
-  "platform-version": "2.2",
+  "platform-version": "2.3",
   "product": {
     "freshdesk": {
       "location": {
+        "ticket_requester_info": {
+          "url": "index.html",
+          "icon": "styles/images/api64.svg"
+        },
         "ticket_sidebar": {
           "url": "index.html",
           "icon": "styles/images/api64.svg"
@@ -14,9 +18,8 @@
       }
     }
   },
-  "whitelisted-domains": [],
   "engines": {
-    "node": "14.21.3",
-    "fdk": "8.6.7"
+    "node": "18.14.2",
+    "fdk": "9.0.7"
   }
 }
