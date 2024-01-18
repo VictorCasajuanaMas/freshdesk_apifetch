@@ -34,7 +34,7 @@ async function renderText() {
   debug('#AP#13 get response from URL')
   await fetch(newUrl, parameters)
                               .then( response => response.text() )
-                              .then( result => textElement.innerText = result )
+                              .then( result => textElement.innerHTML = result )
                               .catch( error => console.error(error) );
 
   debug('#AP#14 get response text')
